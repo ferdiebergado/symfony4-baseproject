@@ -1,0 +1,15 @@
+{% apply inky|inline_css(source('@css/foundation-emails.css')) %}
+
+<container>
+    <row class="header">
+        <columns>
+            <spacer size="16"></spacer>
+            <h1 class="text-center">Welcome
+                {{ email.to[0].address }}!</h1>
+        </columns>
+
+        <button href="{{ params.url }}" class="radius">Activate</button>
+        {# ... #}
+    </row>
+</container>
+{% endapply %}

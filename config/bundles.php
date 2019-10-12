@@ -16,4 +16,6 @@ return [
     DAMA\DoctrineTestBundle\DAMADoctrineTestBundle::class => ['test' => true],
     Doctrine\Bundle\FixturesBundle\DoctrineFixturesBundle::class => ['dev' => true, 'test' => true],
     Fidry\PsyshBundle\PsyshBundle::class => ['dev' => true, 'test' => true],
+    Twig\Inky\Bundle\TwigInkyBundle::class => ['all' => true],
+    Twig\CssInliner\Bundle\TwigCssInlinerBundle::class => ['all' => true],
 ];
