@@ -1,0 +1,15 @@
+{% apply inky|inline_css(source('@css/foundation-emails.css')) %}
+
+<container>
+    <row class="header">
+        <columns>
+            <spacer size="16">Hi there!</spacer>
+        </columns>
+        <p>You have requested to reset your password.</p>
+        <p>Click the button below to proceed.</p>
+    </row>
+    <row>
+        <button href="{{ params.url }}" class="radius">RESET PASSWORD</button>
+    </row>
+</container>
+{% endapply %}

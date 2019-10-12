@@ -19,7 +19,7 @@ use Symfony\Component\Form\Extension\Core\Type\RepeatedType;
 /**
  * Registration Form Type
  */
-class RegistrationFormType extends AbstractType
+class ResetPasswordType extends AbstractType
 {
     /**
      * @inheritDoc
@@ -27,14 +27,7 @@ class RegistrationFormType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
-            ->add('email')
-            ->add('plainPassword', PasswordRepeatedType::class, [])
-            ->add('agreeTerms', CheckboxType::class, [
-                'mapped' => false,
-                'constraints' => [
-                    new IsTrue(['message' => 'You should agree to our terms.']),
-                ],
-            ]);
+            ->add('plainPassword', PasswordRepeatedType::class, []);
     }
 
     /**
@@ -42,8 +35,6 @@ class RegistrationFormType extends AbstractType
      */
     public function configureOptions(OptionsResolver $resolver): void
     {
-        $resolver->setDefaults([
-            'data_class' => User::class,
-        ]);
+        $resolver->setDefaults([]);
     }
 }

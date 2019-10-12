@@ -1,3 +1,10 @@
 #index:
 #    path: /
 #    controller: App\Controller\DefaultController::index
+
+# forgot_password:
+#     path: /forgot_password
+#     controller: Symfony\Bundle\FrameworkBundle\Controller\TemplateController::templateAction
+#     defaults:
+#         template: security/forgot_password.html.twig
+

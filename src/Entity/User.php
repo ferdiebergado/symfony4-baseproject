@@ -100,6 +100,11 @@ class User implements UserInterface
      */
     private $updatedBy;
 
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $passwordResetToken;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -265,6 +270,18 @@ class User implements UserInterface
     public function setUpdatedBy(?self $updatedBy): self
     {
         $this->updatedBy = $updatedBy;
+
+        return $this;
+    }
+
+    public function getPasswordResetToken(): ?string
+    {
+        return $this->passwordResetToken;
+    }
+
+    public function setPasswordResetToken(?string $passwordResetToken): self
+    {
+        $this->passwordResetToken = $passwordResetToken;
 
         return $this;
     }
